@@ -1,0 +1,34 @@
+{
+	"geode": "5.11.2",
+	"gd": {
+		"win": "2.2081",
+		"android": "2.2081"
+	},
+	"version": "v2.0.0",
+	"id": "community.predictivebuffer-mobile",
+	"name": "Predictive Input Buffer (Mobile)",
+	"developer": "Recreación móvil · concepto de lilWC",
+	"description": "Buffer de inputs de 2 a 16 ticks para Android: release buffer, press buffer en orbes y protecciones por modo de juego.",
+	"settings": {
+		"stage": {
+			"type": "string",
+			"name": "Nivel de buffer (normal/ship-swing-wave-robot, en ticks)",
+			"description": "El primer número es para cube, ball, ufo y spider; el segundo para ship, swing, wave y robot. TEST (60 ticks) solo sirve para comprobar que funciona. También se cambia desde el menú de pausa.",
+			"default": "2/2",
+			"one-of": [
+				"2/2",
+				"4/4",
+				"8/8",
+				"16/8",
+				"TEST",
+				"OFF"
+			]
+		},
+		"show-saves": {
+			"type": "bool",
+			"name": "Mostrar aviso cuando el buffer actúa",
+			"description": "Muestra HOLD o ORB arriba de la pantalla cada vez que el buffer salva un input.",
+			"default": true
+		}
+	}
+}
